@@ -40,7 +40,7 @@ def set_alien_hurt():
     alien.image = 'boom'
     # sounds.eep.play()
     alien.bottom -= 1
-    clock.schedule_unique(set_alien_normal, 0.2)
+    clock.schedule_unique(set_alien_normal, 0.1)
 
 def set_alien_normal():
     alien.image = 'skull'
