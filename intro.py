@@ -12,23 +12,21 @@ WIDTH = 200
 HEIGHT = 300
 score = 0
 
-def eliminate():
-    score = score + 1
-
 def draw():
-
     screen.clear()
     alien.draw()
     hero.draw()
     bullet.draw()
     screen.draw.text(str(score), topright=(195,5), owidth=0.5, ocolor=(0,0,0), color=(255,255,255), fontsize=20)
 
-def update():
+def eliminate():
+    score += 1
 
-    screen.draw.text(str(score), topright=(5,5), owidth=0.5, ocolor=(255,255,255), color=(255,255,255), fontsize=20)
+def update():
+    global score
     alien.bottom += 1
     if alien.top > HEIGHT:
-        alien.bottom = 0
+        alien.bottomright = random.randint(20, 200), 0
     if keyboard.left:
         hero.x -= 5
         bullet.x -= 5
@@ -49,7 +47,7 @@ def update():
 
     if alien.bottom > bullet.top and alien.right >= bullet.left and alien.left <= bullet.right:
         set_alien_hurt()
-        # eliminate()
+        score += 1
         set_bullet_normal()
 
 
