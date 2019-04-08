@@ -31,18 +31,20 @@ def update():
 
     if alien.bottom > bullet.top:
         set_alien_hurt()
-        alien.bottom += 0
+
         set_bullet_normal()
-        alien.bottom = 0
+
 
 
 def set_alien_hurt():
     alien.image = 'boom'
-    sounds.eep.play()
+    # sounds.eep.play()
+    alien.bottom -= 1
     clock.schedule_unique(set_alien_normal, 0.2)
 
 def set_alien_normal():
     alien.image = 'skull'
+    alien.bottom = 0
 
 def set_bullet_normal():
     bullet.bottomleft = hero.bottomleft
