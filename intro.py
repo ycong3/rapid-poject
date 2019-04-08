@@ -29,7 +29,7 @@ def update():
         animate(bullet, tween='linear', duration=0.3, on_finished=None, pos=(hero.left,0))
         clock.schedule_unique(set_bullet_normal, 0.3)
 
-    if alien.bottom > bullet.top:
+    if alien.bottom > bullet.top and alien.right >= bullet.left and alien.left <= bullet.right:
         set_alien_hurt()
 
         set_bullet_normal()
