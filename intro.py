@@ -23,7 +23,7 @@ def eliminate():
     score += 1
 
 def update():
-    global score
+
     alien.bottom += 1
     if alien.top > HEIGHT:
         alien.bottomright = random.randint(20, 200), 0
@@ -47,20 +47,24 @@ def update():
 
     if alien.bottom > bullet.top and alien.right >= bullet.left and alien.left <= bullet.right:
         set_alien_hurt()
-        score += 1
+
         set_bullet_normal()
 
 
 def set_alien_hurt():
+
     alien.image = 'boom'
     # sounds.eep.play()
     alien.bottom -= 1
+
 
     clock.schedule_unique(set_alien_normal, 0.1)
 
 def set_alien_normal():
     alien.image = 'skull'
     alien.bottomright = random.randint(20, 200), 0
+    global score
+    score += 1
 
 def set_bullet_normal():
     bullet.bottomleft = hero.bottomleft
