@@ -40,10 +40,10 @@ def update():
     elif hero.right == 0:
         hero.left = 200
         bullet.left = 200
-
-    if keyboard.space:
-        animate(bullet, tween='linear', duration=0.3, on_finished=None, x=hero.x, y=0)
-        clock.schedule_unique(set_bullet_normal, 0.3)
+    if bullet.bottomleft == hero.bottomleft:
+        if keyboard.space:
+            animate(bullet, tween='linear', duration=0.3, on_finished=None, x=hero.x, y=0)
+            clock.schedule_unique(set_bullet_normal, 0.3)
 
     if alien.bottom > bullet.top and alien.right >= bullet.left and alien.left <= bullet.right:
         set_alien_hurt()
