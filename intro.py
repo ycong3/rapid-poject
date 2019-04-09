@@ -35,11 +35,11 @@ def update():
         bullet.x += 5
 
     if hero.left == 200:
-        bullet.right = 0
-        hero.right = 0
+        bullet.right = 5
+        hero.right = 5
     elif hero.right == 0:
-        hero.left = 200
-        bullet.left = 200
+        hero.left = 195
+        bullet.left = 195
     if bullet.bottomleft == hero.bottomleft:
         if keyboard.space:
             animate(bullet, tween='linear', duration=0.3, on_finished=None, x=hero.x, y=0)
