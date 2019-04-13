@@ -14,6 +14,7 @@ hurt = 0
 game = 1 # game running > 1; game over > 0
 
 def draw():
+    screen.blit('background.png', (0, 0))
     screen.clear()
     alien.draw()
     hero.draw()
@@ -41,7 +42,7 @@ def update():
         alien.bottom += 0
         # alien.bottomright = random.randint(20, 200), 0
     else:
-        alien.bottom += 2
+        alien.bottom += 4
     if keyboard.left and hero.left >= 5 and game == 1:
         hero.x -= 5
         bullet.x -= 5
