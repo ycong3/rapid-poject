@@ -2,7 +2,6 @@ alien = Actor('skull')
 hero = Actor('spaceship')
 bullet = Actor('bullet')
 
-# reference: https://github.com/TechnoVisual/Pygame-Zero/tree/master/invaders
 import random
 
 alien.bottomright = random.randint(20, 200), 0 # set alien positoin on the top of the screen, the image start with bottom rgiht
