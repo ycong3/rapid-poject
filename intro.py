@@ -14,11 +14,11 @@ hurt = 0
 game = 1 # game running > 1; game over > 0
 
 def draw():
-    screen.blit('background.png', (0, 0))
     screen.clear()
+    screen.blit('background', (0, 0))
     alien.draw()
-    hero.draw()
     bullet.draw()
+    hero.draw()
     if game == 1:
         screen.draw.text(str(score), topright=(195,5), owidth=0.5, ocolor=(0,0,0), color=(255,255,255), fontsize=20)
     if game == 0:
@@ -35,7 +35,7 @@ def update():
     global game
 
      # set alien speed
-    if alien.top > (HEIGHT - 20):
+    if alien.top > (HEIGHT - 40):
         alien.image = 'boom'
         game = 0
     elif hurt == 1:
