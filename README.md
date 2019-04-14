@@ -1,5 +1,7 @@
 # rapid-project
 
+
+Game name: Earth Guadian
 This is a school project. 
 We are creating a shooting game which the enemies will be generated based on the data from ultrasonic distance sensor.
 Open into.py in Mu under pygame zero mode and click play to test the game.
