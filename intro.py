@@ -35,7 +35,7 @@ def update():
     global game
 
      # set alien speed
-    if alien.top > (HEIGHT - 40):
+    if alien.bottom > hero.top:
         alien.image = 'boom'
         game = 0
     elif hurt == 1:
