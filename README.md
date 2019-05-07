@@ -1,7 +1,8 @@
-###Features
+
 
 
 The project is composed of a 2.8-inch portable monitor, a Micro:bit, a Raspberry Pi, and a sound sensor(microphone). 
+
 **Game Name:** Earth Guardian
 
 **Background Story:** In 20xx, a group of aliens start to invade Earth. A hero drives the spaceship to protect the earth, Although it is impossible to keep alive in such chaos, the hero must try to kill as many aliens as possible before dying.
