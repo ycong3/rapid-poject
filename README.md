@@ -15,4 +15,4 @@ To play the game, the player uses the accelerometer on Micro: bit to control the
 
 Thanks to Professor Dr. Monica Maceli and Mr. Basem Aly for giving us material and technical supports!
 
-[![N|Solid](https://github.com/ycong3/rapid-project/blob/master/Earth%20Guardian.png?raw=true)](https://github.com/ycong3/rapid-project/blob/master/Earth%20Guardian.png?raw=true)
+[![N|Solid](https://github.com/ycong3/rapid-project/blob/master/how_to_connect.png?raw=true)](https://github.com/ycong3/rapid-project/blob/master/how_to_connect.png?raw=true)
