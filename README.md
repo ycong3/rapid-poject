@@ -1,4 +1,4 @@
-###Features
+#Features
 
 
 The project is composed of a 2.8-inch portable monitor, a Micro:bit, a Raspberry Pi, and a sound sensor(microphone). 
