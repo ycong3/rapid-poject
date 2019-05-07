@@ -13,6 +13,6 @@ To set up the device, plug the Micro:bit to raspberry pi and flash mbControl.py 
 
 To play the game, the player uses the accelerometer on Micro: bit to control the position of the spaceship and constantly make sounds to activate the sound sensor and shoot the aliens falling down from the top of the screen. Each kill scores 1 point. The game is over when the alien touches the city. The goal is to kill more enemies in a row to get a higher score.
 
-
+Thanks to Professor Dr. Monica Maceli and Mr. Basem Aly for giving us material and technical supports!
 
 [![N|Solid](https://github.com/ycong3/rapid-project/blob/master/Earth%20Guardian.png?raw=true)](https://github.com/ycong3/rapid-project/blob/master/Earth%20Guardian.png?raw=true)
