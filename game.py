@@ -17,18 +17,18 @@ pin0 = DigitalInputDevice(27)
 pin1 = DigitalInputDevice(17)
 pin2 = DigitalInputDevice(22)
 
-ultrasonic = DistanceSensor(echo = 18, trigger = 4, max_distance = 5)
+# ultrasonic = DistanceSensor(echo = 18, trigger = 4, max_distance = 5)
 
 
 # DigitalInputDevice(18)
 # reading = port.read(12)
 # reading = DigitalInputDevice(18)
 
-alien.bottomright = random.randint(20, 320), 0 # set alien positoin on the top of the screen, the image start with bottom rgiht
-hero.bottomleft = 90, 290 # set space ship position on the bottom of the screen, the image start with bottom right
+alien.bottomright = random.randint(20, 240), 0 # set alien positoin on the top of the screen, the image start with bottom rgiht
+hero.bottomleft = 110, 290 # set space ship position on the bottom of the screen, the image start with bottom right
 bullet.bottomleft = hero.bottomleft # set bullet position same as the space ship
-WIDTH = 320 # set display size 200*300
-HEIGHT = 480
+WIDTH = 240 # set display size 240*320
+HEIGHT = 320
 score = 0 # set score
 hurt = 0
 game = 1 # game running > 1; game over > 0
@@ -42,13 +42,13 @@ def draw():
     # screen.draw.text(str(mic), center=(100,50), owidth=0.5, ocolor=(0,0,0), color=(255,255,255), fontsize=20)
     # screen.draw.text(str(ultrasonic.distance), center=(100,30), owidth=0.5, ocolor=(0,0,0), color=(255,255,255), fontsize=20)
     if game == 1:
-        screen.draw.text(str(score), topright=(195,5), owidth=0.5, ocolor=(0,0,0), color=(255,255,255), fontsize=20)
+        screen.draw.text(str(score), topright=(235,5), owidth=0.5, ocolor=(0,0,0), color=(255,255,255), fontsize=20)
     
     if game == 0:
-        screen.draw.text("SCORE", center=(100,100), owidth=0.5, ocolor=(0,0,0), color=(255,255,255), fontsize=24)
-        screen.draw.text(str(score), center=(100,130), owidth=0.5, ocolor=(0,0,0), color=(255,255,255), fontsize=30)
-        screen.draw.text("GAME OVER", center=(100,170), owidth=0.5, ocolor=(0,0,0), color=(255,255,255), fontsize=20)
-        screen.draw.text("PRESS A TO RESTART", center=(100,190), owidth=0.5, ocolor=(0,0,0), color=(255,255,255), fontsize=20)
+        screen.draw.text("SCORE", center=(120,100), owidth=0.5, ocolor=(0,0,0), color=(255,255,255), fontsize=24)
+        screen.draw.text(str(score), center=(120,130), owidth=0.5, ocolor=(0,0,0), color=(255,255,255), fontsize=30)
+        screen.draw.text("GAME OVER", center=(120,170), owidth=0.5, ocolor=(0,0,0), color=(255,255,255), fontsize=20)
+        screen.draw.text("PRESS A TO RESTART", center=(120,190), owidth=0.5, ocolor=(0,0,0), color=(255,255,255), fontsize=20)
 
 channel = 26
 GPIO.setmode(GPIO.BCM)
@@ -122,7 +122,7 @@ def set_alien_hurt():
 
 def set_alien_normal():
     alien.image = 'skull'
-    alien.bottomright = random.randint(20, 200), 0
+    alien.bottomright = random.randint(20, 240), 0
     global hurt
     hurt = 0
     global score
